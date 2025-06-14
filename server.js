@@ -17,10 +17,7 @@ const allowedOrigins = [
 ];
 
 
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
-}));
+app.use(cors({ origin: '*' }));
 app.use(express.json())
 app.use(express.static("public"))
 
