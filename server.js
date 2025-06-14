@@ -12,8 +12,10 @@ const JWT_SECRET = "your-secret-key-here"
 
 // Middleware
 const allowedOrigins = [
-  "https://dsa-tracker-green-rho.vercel.app", // Replace with your actual Vercel frontend URL
+  "https://dsa-tracker-8w0tuc43j-agniva-haits-projects.vercel.app",
+  "http://localhost:3000"
 ];
+
 
 app.use(cors({
   origin: allowedOrigins,
