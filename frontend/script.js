@@ -3,7 +3,7 @@ let currentUser = null
 let currentSection = "dashboard"
 
 // API base URL
-const API_BASE = "https://dsa-tracker.onrender.com/api"
+const API_BASE = "https://dsa-tracker-e5lk.onrender.com/"
 
 // Initialize app
 document.addEventListener("DOMContentLoaded", () => {
