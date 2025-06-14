@@ -74,6 +74,10 @@ const authenticateToken = (req, res, next) => {
 }
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("DSA Tracker Backend API is running!");
+});
+
 
 // Register
 app.post("/api/register", async (req, res) => {
@@ -227,9 +231,9 @@ app.get("/api/leaderboard", async (req, res) => {
 })
 
 // Serve static files
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"))
-})
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "public", "index.html"))
+// })
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
