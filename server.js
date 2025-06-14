@@ -11,7 +11,14 @@ const PORT = process.env.PORT || 3000
 const JWT_SECRET = "your-secret-key-here"
 
 // Middleware
-app.use(cors())
+const allowedOrigins = [
+  "https://dsa-tracker-green-rho.vercel.app", // Replace with your actual Vercel frontend URL
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 app.use(express.json())
 app.use(express.static("public"))
 
